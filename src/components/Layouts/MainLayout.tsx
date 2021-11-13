@@ -1,4 +1,5 @@
 import ToolBar from '../Toolbar/ToolBar'
+import SideBar from '../Sidebar/SideBar'
 
 const MainLayout: React.FC = ({ children }) => {
     return (
@@ -7,7 +8,11 @@ const MainLayout: React.FC = ({ children }) => {
                 <ToolBar />
             </div>
 
-            <main>{children}</main>
+            <div className="main">
+                <SideBar />
+                <main>{children}</main>
+                <div></div>
+            </div>
         </>
     )
 }

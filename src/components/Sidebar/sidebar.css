@@ -1,0 +1,47 @@
+.sidebar {
+  background-color: #5957DB;
+  height: calc(100vh - 80px);
+  display: grid;
+  justify-items: center;
+  align-content: space-between;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.sidebar__links {
+  display: grid;
+  width: 100%;
+}
+.sidebar__links .link {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 50px 0 0 50px;
+  position: relative;
+  text-decoration: none;
+}
+.sidebar__links .link.active {
+  color: #5957DB;
+  background-color: #ECF2FF;
+}
+.sidebar .account {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto 30px auto auto;
+}
+.sidebar .account span {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-left: 12px;
+}
+
+/*# sourceMappingURL=sidebar.css.map */
