@@ -1,6 +1,6 @@
 .sidebar {
   background-color: #5957DB;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 80px - 30px - 20px);
   display: grid;
   justify-items: center;
   align-content: space-between;

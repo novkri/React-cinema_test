@@ -1,0 +1,22 @@
+.payment {
+  height: calc(100vh - 80px);
+  width: 200px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.ticket {
+  background-color: #5957DB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay {
+  background-color: #ECF2FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=payment.css.map */

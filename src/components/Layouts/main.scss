@@ -1,0 +1,11 @@
+@import "../../stylesMixin";
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  position: relative;
+
+  &.full {
+    grid-template-columns: 1fr 5fr 2fr;
+  }
+}

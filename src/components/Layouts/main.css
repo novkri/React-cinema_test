@@ -1,0 +1,10 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  position: relative;
+}
+.main.full {
+  grid-template-columns: 1fr 5fr 2fr;
+}
+
+/*# sourceMappingURL=main.css.map */
