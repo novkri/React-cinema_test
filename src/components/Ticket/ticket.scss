@@ -36,12 +36,10 @@
         grid-template-columns: 1fr 2fr;
 
         span.info__info {
+          @include text(bold, $text, 12px);
           margin-left: 20px;
           text-align: left;
-          font-weight: bold;
-          font-size: 12px;
           line-height: 14px;
-          color: #666666;
         }
       }
 
@@ -52,10 +50,8 @@
       padding: 20px 30px 8px;
 
       &__title {
-        font-weight: normal;
-        font-size: 12px;
+        @include text(normal, #AAAAAA, 12px);
         line-height: 14px;
-        color: #AAAAAA;
         text-align: right;
       }
     }

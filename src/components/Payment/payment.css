@@ -15,8 +15,64 @@
 .pay {
   background-color: #ECF2FF;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 40px 60px;
+}
+.pay .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 2px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.pay .add-card {
+  margin-top: 20px;
+  margin-bottom: 58px;
+  border: 2px solid #a7b2c7;
+  border-radius: 8px;
+  padding: 22px;
+  width: calc(100% - 50px);
+  cursor: pointer;
+}
+.pay .add-card .plus {
+  margin: auto;
+  height: 16px;
+  width: 16px;
+  color: #a7b2c7;
+  font-size: 24px;
+  line-height: 1px;
+}
+.pay .add-card:hover {
+  border-color: #8e9db2;
+  background-color: #e7e8f5;
+}
+.pay .add-card:hover .plus {
+  color: #8e9db2;
+}
+.pay__btn {
+  width: 240px;
+  height: 60px;
+  border: none;
+  background: #43D000;
+  text-align: center;
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.pay__btn.active {
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+}
+.pay__btn:hover {
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
 }
 
 /*# sourceMappingURL=payment.css.map */

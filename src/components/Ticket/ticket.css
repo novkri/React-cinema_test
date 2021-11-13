@@ -32,22 +32,26 @@
   grid-template-columns: 1fr 2fr;
 }
 .ticket-card .body ul li span.info__info {
-  margin-left: 20px;
-  text-align: left;
+  font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 2px;
   color: #666666;
+  margin-left: 20px;
+  text-align: left;
+  line-height: 14px;
 }
 .ticket-card .body .info {
   display: grid;
   padding: 20px 30px 8px;
 }
 .ticket-card .body .info__title {
+  font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 2px;
   color: #AAAAAA;
+  line-height: 14px;
   text-align: right;
 }
 .ticket-card .body .barcode {

@@ -6,9 +6,6 @@ $accent-green: #43D000;
 $accent-blue: #5957DB;
 $text: #666666;
 
-@mixin test() {
-  display: flex;
-}
 
 @mixin text($weight: normal, $text-color: $text, $size: 16px) {
   font-style: normal;
@@ -34,6 +31,13 @@ $text: #666666;
   &.active {
     box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
   }
+
+  @if $bg-color == $accent-green {
+    &:hover {
+      box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+    }
+  }
+
 }
 
 @mixin button-rounded($bg-color: $primary, $width: 190px, $height: 60px) {
