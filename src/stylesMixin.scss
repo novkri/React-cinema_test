@@ -1,11 +1,20 @@
-@import 'styleVariables';
+//@import url('./styleVariables.scss');
 //font-family: Montserrat;
+
+$primary: #ECF2FF;
+$accent-green: #43D000;
+$accent-blue: #5957DB;
+$text: #666666;
+
+@mixin test() {
+  display: flex;
+}
 
 @mixin text($weight: normal, $text-color: $text, $size: 16px) {
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
-  line-height: 20px;
+  line-height: 2px;
   color: $text-color;
 }
 
@@ -23,7 +32,7 @@
   }
 }
 
-@mixin button-rounded($bg-color: $primary, $width, $height) {
+@mixin button-rounded($bg-color: $primary, $width: 190px, $height: 60px) {
   @include button($bg-color, $width, $height);
   border-radius: 30px;
 }
