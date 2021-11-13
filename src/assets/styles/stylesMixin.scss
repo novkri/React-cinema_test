@@ -1,0 +1,29 @@
+@import 'styleVariables';
+//font-family: Montserrat;
+
+@mixin text($weight: normal, $text-color: $text, $size: 16px) {
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 20px;
+  color: $text-color;
+}
+
+@mixin button($bg-color: $primary, $width: 300px, $height: 120px) {
+  width: $width;
+  height: $height;
+
+  background: $bg-color;
+  text-align: center;
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+
+  &:hover {
+    box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+  }
+}
+
+@mixin button-rounded($bg-color: $primary, $width, $height) {
+  @include button($bg-color, $width, $height);
+  border-radius: 30px;
+}
