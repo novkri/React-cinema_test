@@ -1,14 +1,23 @@
 import './toolbar.scss'
 import Logo from '../../assets/img/logo.svg'
+import { Link } from 'react-router-dom'
 
 const ToolBar: React.FC = () => {
     return (
         <div className="toolbar">
-            <img className="logo" src={Logo} alt="logo" />
+            <Link to="/">
+                <img className="logo" src={Logo} alt="logo" />
+            </Link>
+
             {/* todo ссылки */}
             <div className="links">
-                <span className="link">Главная {'>'} </span>
-                <span className="link">Сеансы {'>'} </span>
+                <Link to="/" className="link">
+                    Главная {'>'}{' '}
+                </Link>
+                <Link to="/session" className="link">
+                    Сеансы {'>'}{' '}
+                </Link>
+
                 <span className="link current">Фильм</span>
             </div>
             {/* todo make select */}

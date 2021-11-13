@@ -4,7 +4,7 @@
   height: 80px;
   background-color: $primary;
   display: grid;
-  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-columns: 1fr 5fr 1.7fr;
   align-content: center;
 }
 
@@ -19,6 +19,7 @@
   .link {
     @include text(bold, $accent-blue);
     text-transform: uppercase;
+    text-decoration: none;
 
     &.current {
       color: $text;

@@ -2,7 +2,7 @@
 
 .sidebar {
   background-color: $accent-blue;
-  height: calc(100vh - 80px - 30px - 20px);
+  min-height: calc(100vh - 80px - 30px - 40px);
   display: grid;
   justify-items: center;
   align-content: space-between;

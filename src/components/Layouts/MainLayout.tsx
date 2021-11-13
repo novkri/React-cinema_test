@@ -5,7 +5,7 @@ import Payment from '../Payment/Payment'
 import { useState } from 'react'
 
 const MainLayout: React.FC = ({ children }) => {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
 
     return (
         <>
@@ -16,7 +16,7 @@ const MainLayout: React.FC = ({ children }) => {
             <div className={'main' + (!open ? '' : ' full')}>
                 <SideBar />
                 <main>
-                    <button onClick={() => setOpen(!open)}>df</button>
+                    {/*<button onClick={() => setOpen(!open)}>df</button>*/}
                     {children}
                 </main>
                 {open && <Payment />}

@@ -2,7 +2,7 @@
   height: 80px;
   background-color: #ECF2FF;
   display: grid;
-  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-columns: 1fr 5fr 1.7fr;
   align-content: center;
 }
 
@@ -21,6 +21,7 @@
   line-height: 2px;
   color: #5957DB;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .links .link.current {
   color: #666666;
