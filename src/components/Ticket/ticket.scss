@@ -1,0 +1,85 @@
+@import "../../stylesMixin";
+
+.ticket-card {
+  border-radius: 8px;
+  background-color: white;
+  width: 240px;
+
+  .header {
+    border-radius: 8px 8px 0 0;
+    background-color: $accent-green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+
+    span {
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .body {
+    min-height: 296px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        span.info__info {
+          margin-left: 20px;
+          text-align: left;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 14px;
+          color: #666666;
+        }
+      }
+
+    }
+
+    .info {
+      display: grid;
+      padding: 20px 30px 8px;
+
+      &__title {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #AAAAAA;
+        text-align: right;
+      }
+    }
+
+    .barcode {
+      position: relative;
+
+      // todo
+      &:before {
+        content: '';
+        background-color: $accent-blue;
+        width: 10px;
+        height: 8px;
+      }
+    }
+
+    .decoration {
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      border-top: 2px dashed #ECF2FF;
+      top: 0;
+      left: 0;
+
+    }
+  }
+}

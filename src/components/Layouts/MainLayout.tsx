@@ -13,7 +13,7 @@ const MainLayout: React.FC = ({ children }) => {
                 <ToolBar />
             </div>
 
-            <div className={'main' + (open ? '' : ' full')}>
+            <div className={'main' + (!open ? '' : ' full')}>
                 <SideBar />
                 <main>
                     <button onClick={() => setOpen(!open)}>df</button>

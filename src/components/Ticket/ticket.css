@@ -1,0 +1,71 @@
+.ticket-card {
+  border-radius: 8px;
+  background-color: white;
+  width: 240px;
+}
+.ticket-card .header {
+  border-radius: 8px 8px 0 0;
+  background-color: #43D000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+.ticket-card .header span {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.ticket-card .body {
+  min-height: 296px;
+}
+.ticket-card .body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.ticket-card .body ul li {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.ticket-card .body ul li span.info__info {
+  margin-left: 20px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #666666;
+}
+.ticket-card .body .info {
+  display: grid;
+  padding: 20px 30px 8px;
+}
+.ticket-card .body .info__title {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #AAAAAA;
+  text-align: right;
+}
+.ticket-card .body .barcode {
+  position: relative;
+}
+.ticket-card .body .barcode:before {
+  content: "";
+  background-color: #5957DB;
+  width: 10px;
+  height: 8px;
+}
+.ticket-card .body .decoration {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  border-top: 2px dashed #ECF2FF;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=ticket.css.map */
