@@ -1,4 +1,4 @@
-//@import url('./styleVariables.scss');
+
 //font-family: Montserrat;
 
 $primary: #ECF2FF;
@@ -21,13 +21,17 @@ $text: #666666;
 @mixin button($bg-color: $primary, $width: 300px, $height: 120px) {
   width: $width;
   height: $height;
-
+  border: none;
   background: $bg-color;
   text-align: center;
   border-radius: 8px;
   transition: all ease-in 0.3s;
 
   &:hover {
+
+  }
+
+  &.active {
     box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
   }
 }
@@ -35,4 +39,9 @@ $text: #666666;
 @mixin button-rounded($bg-color: $primary, $width: 190px, $height: 60px) {
   @include button($bg-color, $width, $height);
   border-radius: 30px;
+
+  // todo btn hover
+  &:hover {
+    //box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+  }
 }

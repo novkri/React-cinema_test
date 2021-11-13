@@ -4,4 +4,34 @@
   height: 80px;
   background-color: $primary;
   display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+  align-content: center;
+}
+
+.logo {
+  margin: auto;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+
+  .link {
+    @include text(bold, $accent-blue);
+    text-transform: uppercase;
+
+    &.current {
+      color: $text;
+    }
+  }
+}
+
+.select-btn {
+  @include button(#fff, 329px, 48px);
+  cursor: pointer;
+  color: $accent-blue;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }

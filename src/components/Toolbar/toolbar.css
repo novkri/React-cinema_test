@@ -2,6 +2,47 @@
   height: 80px;
   background-color: #ECF2FF;
   display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+  align-content: center;
+}
+
+.logo {
+  margin: auto;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+}
+.links .link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 2px;
+  color: #5957DB;
+  text-transform: uppercase;
+}
+.links .link.current {
+  color: #666666;
+}
+
+.select-btn {
+  width: 329px;
+  height: 48px;
+  border: none;
+  background: #fff;
+  text-align: center;
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+  color: #5957DB;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.select-btn.active {
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
 }
 
 /*# sourceMappingURL=toolbar.css.map */
