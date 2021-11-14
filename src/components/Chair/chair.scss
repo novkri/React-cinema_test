@@ -1,0 +1,29 @@
+@import "../../stylesMixin";
+
+.chair {
+  color: $accent-blue;
+  background-image: url("../../assets/img/ChairFree.svg");
+  height: 80px;
+  width: 80px;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all ease-in 0.3s;
+  margin: 0 15px;
+
+
+  &.occupied {
+    color: #CCDAF4;
+    background-image: url("../../assets/img/chair.svg");
+  }
+
+  &.active {
+    color: white;
+    background-image: url("../../assets/img/ChaierSelected.svg");
+  }
+}

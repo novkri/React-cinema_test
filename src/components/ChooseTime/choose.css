@@ -1,0 +1,100 @@
+.screen {
+  width: 100%;
+  height: 60px;
+  background-image: url("../../assets/img/screen.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen span {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #CCDAF4;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 23fr;
+}
+.row span {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #666666;
+  align-self: center;
+  text-align: end;
+}
+
+.chairsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-column-gap: 72px;
+  margin-left: 37px;
+}
+.info__place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info span {
+  margin-left: 12px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #666666;
+}
+.info .indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+.info .indicator.free {
+  background-color: #ECF2FF;
+}
+.info .indicator.occupied {
+  background-color: white;
+  border: 2px solid #ECF2FF;
+  width: 20px;
+  height: 20px;
+}
+.info .indicator.active {
+  background-color: #43D000;
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.timeRow span {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #666666;
+  align-self: center;
+}
+.timeRow.three-d {
+  border-top: 2px dashed #ECF2FF;
+  margin-bottom: 60px;
+}
+
+/*# sourceMappingURL=choose.css.map */

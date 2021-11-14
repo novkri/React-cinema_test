@@ -1,0 +1,38 @@
+.time-btn {
+  width: 190px;
+  height: 60px;
+  border: none;
+  background: #ECF2FF;
+  text-align: center;
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #5957DB;
+  cursor: pointer;
+}
+.time-btn.active {
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+}
+.time-btn.active {
+  width: 190px;
+  height: 60px;
+  border: none;
+  background: #43D000;
+  text-align: center;
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+  border-radius: 30px;
+  color: white;
+}
+.time-btn.active.active {
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+}
+.time-btn.active:hover {
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+}
+
+/*# sourceMappingURL=time-button.css.map */

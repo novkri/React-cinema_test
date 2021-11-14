@@ -1,0 +1,112 @@
+@import "../../stylesMixin";
+
+.screen {
+  width: 100%;
+  height: 60px;
+  background-image: url("../../assets/img/screen.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #CCDAF4;
+  }
+}
+
+// todo row
+.row {
+  display: grid;
+  grid-template-columns: 2fr 23fr;
+
+  span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $text;
+    align-self: center;
+    text-align: end;
+  }
+}
+.chairsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+// todo rows
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-column-gap: 72px;
+  margin-left: 37px;
+
+  &__place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    margin-left: 12px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text;
+  }
+
+  .indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+
+    &.free {
+      background-color: $primary;
+    }
+    &.occupied {
+      background-color: white;
+      border: 2px solid $primary;
+      width: 20px;
+      height: 20px;
+    }
+    &.active {
+      background-color: $accent-green;
+    }
+  }
+}
+
+
+// todo ok row
+.timeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+  span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $text;
+    align-self: center;
+
+  }
+
+  &.three-d {
+    border-top: 2px dashed #ECF2FF;
+    margin-bottom: 60px;
+  }
+}
