@@ -2,14 +2,19 @@ import './payment.css'
 import Ticket from '../Ticket/Ticket'
 import Pay from '../Pay/Pay'
 import { useState } from 'react'
+import { TicketData } from '../../assets/globalVariables'
 
-const Payment: React.FC = () => {
+interface PaymentProps {
+    ticket: TicketData
+}
+
+const Payment: React.FC<PaymentProps> = ({ ticket }) => {
     const [total, setTotal] = useState(800)
 
     return (
         <div className="payment">
             <div className="ticket-container">
-                <Ticket />
+                <Ticket ticket={ticket} />
             </div>
             <div className="pay">
                 <p>Оплата</p>

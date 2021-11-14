@@ -41,39 +41,39 @@
   margin-bottom: 30px;
 }
 
-.info {
+.info-p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 3fr;
   grid-column-gap: 72px;
   margin-left: 37px;
 }
-.info__place {
+.info-p__place {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.info span {
+.info-p span {
   margin-left: 12px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   color: #666666;
 }
-.info .indicator {
+.info-p .indicator {
   width: 24px;
   height: 24px;
   border-radius: 4px;
 }
-.info .indicator.free {
+.info-p .indicator.free {
   background-color: #ECF2FF;
 }
-.info .indicator.occupied {
+.info-p .indicator.occupied {
   background-color: white;
   border: 2px solid #ECF2FF;
   width: 20px;
   height: 20px;
 }
-.info .indicator.active {
+.info-p .indicator.active {
   background-color: #43D000;
 }
 

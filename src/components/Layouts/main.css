@@ -3,8 +3,5 @@
   grid-template-columns: 1fr 7fr;
   position: relative;
 }
-.main.full {
-  grid-template-columns: 1fr 5fr 1.5fr;
-}
 
 /*# sourceMappingURL=main.css.map */

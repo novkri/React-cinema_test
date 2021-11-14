@@ -4,14 +4,16 @@ import { useEffect, useState } from 'react'
 interface ChairProps {
     status: 'free' | 'occupied'
     id: number
+    handleSelectPlace: (id: number) => void
+    isSelected: boolean
 }
-const Chair: React.FC<ChairProps> = ({ status, id }) => {
-    const [isSelected, setIsSelected] = useState(false)
+const Chair: React.FC<ChairProps> = ({
+    status,
+    id,
+    handleSelectPlace,
+    isSelected,
+}) => {
     const [statusClass, setStatusClass] = useState('')
-    const selectPlace = (id: number) => {
-        console.log(id)
-        setIsSelected(!isSelected)
-    }
 
     useEffect(() => {
         if (status) {
@@ -24,7 +26,10 @@ const Chair: React.FC<ChairProps> = ({ status, id }) => {
     }, [status, isSelected])
 
     return (
-        <div className={'chair ' + statusClass} onClick={() => selectPlace(id)}>
+        <div
+            className={'chair ' + statusClass}
+            onClick={() => handleSelectPlace(id)}
+        >
             {id}
         </div>
     )

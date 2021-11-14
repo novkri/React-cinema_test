@@ -1,6 +1,9 @@
 .payment {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .ticket-container {
@@ -33,7 +36,7 @@
   border: 2px solid #a7b2c7;
   border-radius: 8px;
   padding: 22px;
-  width: calc(100% - 50px);
+  width: 95%;
   cursor: pointer;
 }
 .pay .add-card .plus {

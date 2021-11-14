@@ -2,24 +2,28 @@ import './main.css'
 import ToolBar from '../Toolbar/ToolBar'
 import SideBar from '../Sidebar/SideBar'
 import Payment from '../Payment/Payment'
-import { useState } from 'react'
+import { TicketData } from '../../assets/globalVariables'
 
-const MainLayout: React.FC = ({ children }) => {
-    const [open, setOpen] = useState(false)
+interface MainLayoutProps {
+    isOpenTicket: boolean
+    ticket: TicketData
+}
 
+const MainLayout: React.FC<MainLayoutProps> = ({
+    isOpenTicket,
+    ticket,
+    children,
+}) => {
     return (
         <>
             <div>
                 <ToolBar />
             </div>
 
-            <div className={'main' + (!open ? '' : ' full')}>
+            <div className={'main' + (!isOpenTicket ? '' : ' full')}>
                 <SideBar />
-                <main>
-                    {/*<button onClick={() => setOpen(!open)}>df</button>*/}
-                    {children}
-                </main>
-                {open && <Payment />}
+                <main>{children}</main>
+                {isOpenTicket && <Payment ticket={ticket} />}
             </div>
         </>
     )

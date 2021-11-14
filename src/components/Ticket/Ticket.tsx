@@ -1,12 +1,17 @@
 import './ticket.scss'
+import { TicketData } from '../../assets/globalVariables'
 
-const Ticket: React.FC = () => {
+interface TicketProps {
+    ticket: TicketData
+}
+
+const Ticket: React.FC<TicketProps> = ({ ticket }) => {
     return (
         <div className="ticket-card">
             <div className="header">
                 <span>Билеты</span>
                 {/* todo x */}
-                <span>х2</span>
+                <span>х1</span>
             </div>
             <div className="body">
                 <div className="info">
@@ -19,21 +24,29 @@ const Ticket: React.FC = () => {
                         </li>
                         <li>
                             Дата:{' '}
-                            <span className="info__info">23 сентября</span>
+                            <span className="info__info">{ticket.date}</span>
                         </li>
                         <li>
-                            Время: <span className="info__info">20:44</span>
+                            Время:{' '}
+                            <span className="info__info">
+                                {ticket.time.split(' - ')[0]}
+                            </span>
                         </li>
                         <li>
-                            Ряд: <span className="info__info">4</span>
+                            Ряд:{' '}
+                            <span className="info__info">
+                                {ticket.placeRow}
+                            </span>
                         </li>
                         <li>
-                            Места: <span className="info__info">4, 5</span>
+                            {/* todo several places */}
+                            Места:{' '}
+                            <span className="info__info">{ticket.placeId}</span>
                         </li>
                     </ul>
                 </div>
                 <div className="barcode">
-                    <div className="decoration"></div>
+                    <div className="decoration" />
                     barcode
                 </div>
             </div>
