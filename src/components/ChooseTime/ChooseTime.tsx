@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Chair from '../Chair/Chair'
 import { useState } from 'react'
 import TimeButton from '../TimeButton/TimeButton'
+import Slider from '../Slider/Slider'
 
 const enum Types {
     twod = '2d',
@@ -13,6 +14,7 @@ const ChooseTime: React.FC = () => {
     let params = useParams()
     const [time, setTime] = useState('')
     const [type, setType] = useState('')
+    const [date, setDate] = useState('')
 
     const timeBtns2d = ['12:00 - 13:30', '16:30 - 18:00', '20:00 - 21:30']
     const timeBtns3d = ['10:00 - 11:30', '21:00 - 22:30']
@@ -24,6 +26,8 @@ const ChooseTime: React.FC = () => {
 
     return (
         <div>
+            <Slider selectedDate={date} handleClick={(v) => setDate(v)} />
+
             <div className={'timeRow'}>
                 <span>2D</span>
 
