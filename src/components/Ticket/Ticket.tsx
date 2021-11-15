@@ -1,5 +1,6 @@
 import './ticket.scss'
 import { TicketData } from '../../assets/globalVariables'
+import Barcode from '../Barcode'
 
 interface TicketProps {
     ticket: TicketData
@@ -47,7 +48,10 @@ const Ticket: React.FC<TicketProps> = ({ ticket }) => {
                 </div>
                 <div className="barcode">
                     <div className="decoration" />
-                    barcode
+                    <Barcode
+                        ticket={ticket}
+                        filmName={'Кекс наносит ответный удар'}
+                    />
                 </div>
             </div>
         </div>

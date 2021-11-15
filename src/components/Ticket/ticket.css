@@ -57,6 +57,10 @@
 .ticket-card .body .barcode {
   position: relative;
 }
+.ticket-card .body .barcode canvas {
+  width: 73%;
+  height: 56px;
+}
 .ticket-card .body .barcode:before {
   content: "";
   background-color: #5957DB;

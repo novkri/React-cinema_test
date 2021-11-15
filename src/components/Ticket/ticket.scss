@@ -59,7 +59,10 @@
     .barcode {
       position: relative;
 
-      // todo
+      canvas {
+        width: 73%;
+        height: 56px;
+      }
       &:before {
         content: '';
         background-color: $accent-blue;
