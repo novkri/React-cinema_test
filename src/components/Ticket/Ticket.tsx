@@ -34,15 +34,26 @@ const Ticket: React.FC<TicketProps> = ({ ticket }) => {
                             </span>
                         </li>
                         <li>
-                            Ряд:{' '}
+                            Ряд: {/* todo */}
                             <span className="info__info">
-                                {ticket.placeRow}
+                                {ticket.placeRow.map((i, idx) => {
+                                    if (idx !== ticket.placeRow.length - 1) {
+                                        return i + ', '
+                                    } else return i
+                                })}
                             </span>
                         </li>
                         <li>
                             {/* todo several places */}
                             Места:{' '}
-                            <span className="info__info">{ticket.placeId}</span>
+                            <span className="info__info">
+                                {' '}
+                                {ticket.placeId.map((i, idx) => {
+                                    if (idx !== ticket.placeId.length - 1) {
+                                        return i + ', '
+                                    } else return i
+                                })}
+                            </span>
                         </li>
                     </ul>
                 </div>

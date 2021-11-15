@@ -17,8 +17,8 @@ function App() {
         time: '',
         date: '',
         type: Types.unset,
-        placeId: 0,
-        placeRow: 0,
+        placeId: [0],
+        placeRow: [0],
     })
 
     const renderTicket = (data: TicketData) => {

@@ -10,8 +10,8 @@ interface dateTime {
     date: string
     type: Types
     time: string
-    placeId: number
-    placeRow: number
+    placeId: number[]
+    placeRow: number[]
 }
 
 interface ChooseTimeProps {
@@ -28,7 +28,7 @@ const ChooseTime: React.FC<ChooseTimeProps> = ({ renderTicket }) => {
     const [time, setTime] = useState('')
     const [type, setType] = useState(Types.unset)
     const [date, setDate] = useState('')
-    const [place, setPlace] = useState({ id: 0, row: 0 })
+    const [place, setPlace] = useState([{ id: 0, row: 0, idx: '00' }])
 
     const timeBtns2d = ['12:00 - 13:30', '16:30 - 18:00', '20:00 - 21:30']
     const timeBtns3d = ['10:00 - 11:30', '21:00 - 22:30']
@@ -109,16 +109,28 @@ const ChooseTime: React.FC<ChooseTimeProps> = ({ renderTicket }) => {
         setTime(timeString)
         setType(types)
     }
+    const selectPlace = (id: number, row: number) => {
+        place.findIndex((i) => i.idx === `${id}${row}`) === -1
+            ? setPlace([
+                  ...place,
+                  {
+                      id,
+                      row,
+                      idx: `${id}${row}`,
+                  },
+              ])
+            : setPlace([...place.filter((i) => i.idx !== `${id}${row}`)])
+    }
 
     useEffect(() => {
-        if (time && type && date && place.id) {
+        if (time && type && date && place.length) {
             console.log(time, type, date, place)
             renderTicket({
                 time,
                 type,
                 date,
-                placeId: place.id,
-                placeRow: place.row,
+                placeId: place.map((i) => i.id),
+                placeRow: place.map((i) => i.row),
             })
         }
     }, [time, type, date, place])
@@ -170,11 +182,14 @@ const ChooseTime: React.FC<ChooseTimeProps> = ({ renderTicket }) => {
                                     id={item.id}
                                     key={item.id + item.row}
                                     isSelected={
-                                        item.id === place.id &&
-                                        item.row === place.row
+                                        !!place.find(
+                                            (i) =>
+                                                i.idx ===
+                                                `${item.id}${item.row}`
+                                        )
                                     }
-                                    handleSelectPlace={(id) =>
-                                        setPlace({ id, row: item.row })
+                                    handleSelectPlace={() =>
+                                        selectPlace(item.id, item.row)
                                     }
                                 />
                             ))}
@@ -191,11 +206,14 @@ const ChooseTime: React.FC<ChooseTimeProps> = ({ renderTicket }) => {
                                     id={item.id}
                                     key={item.id + item.row}
                                     isSelected={
-                                        item.id === place.id &&
-                                        item.row === place.row
+                                        !!place.find(
+                                            (i) =>
+                                                i.idx ===
+                                                `${item.id}${item.row}`
+                                        )
                                     }
-                                    handleSelectPlace={(id) =>
-                                        setPlace({ id, row: item.row })
+                                    handleSelectPlace={() =>
+                                        selectPlace(item.id, item.row)
                                     }
                                 />
                             ))}

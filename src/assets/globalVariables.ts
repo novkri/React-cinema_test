@@ -13,6 +13,6 @@ export interface TicketData {
     time: string
     type: Types
     date: string
-    placeId: number
-    placeRow: number
+    placeId: number[]
+    placeRow: number[]
 }
