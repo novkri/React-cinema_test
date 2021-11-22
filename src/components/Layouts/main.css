@@ -1,9 +1,7 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 7fr;
-}
-.main.full {
-  grid-template-columns: 1fr 5fr 1.5fr;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

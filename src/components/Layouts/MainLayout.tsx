@@ -7,11 +7,13 @@ import { TicketData } from '../../assets/globalVariables'
 interface MainLayoutProps {
     isOpenTicket: boolean
     ticket: TicketData
+    close: () => void
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
     isOpenTicket,
     ticket,
+    close,
     children,
 }) => {
     return (
@@ -23,7 +25,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
             <div className={'main' + (!isOpenTicket ? '' : ' full')}>
                 <SideBar />
                 <main>{children}</main>
-                {isOpenTicket && <Payment ticket={ticket} />}
+                {isOpenTicket && <Payment ticket={ticket} close={close} />}
             </div>
         </>
     )

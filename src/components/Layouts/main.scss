@@ -3,8 +3,9 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 7fr;
+  position: relative;
 
-  &.full {
-    grid-template-columns: 1fr 5fr 1.5fr;
-  }
+  //&.full {
+  //  grid-template-columns: 1fr 5fr 1.5fr;
+  //}
 }

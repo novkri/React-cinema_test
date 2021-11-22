@@ -123,8 +123,8 @@ const ChooseTime: React.FC<ChooseTimeProps> = ({ renderTicket }) => {
     }
 
     useEffect(() => {
-        if (time && type && date && place.length) {
-            console.log(time, type, date, place)
+        console.log(place)
+        if (time && type && date && place.length > 1) {
             renderTicket({
                 time,
                 type,

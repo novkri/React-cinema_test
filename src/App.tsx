@@ -26,9 +26,17 @@ function App() {
         setTicket(data)
     }
 
+    const closePayment = () => {
+        setOpenTicket(false)
+    }
+
     return (
         <div className="App">
-            <MainLayout isOpenTicket={openTicket} ticket={ticket}>
+            <MainLayout
+                isOpenTicket={openTicket}
+                ticket={ticket}
+                close={closePayment}
+            >
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="session" element={<Session />} />
